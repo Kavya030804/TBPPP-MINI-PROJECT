@@ -1,0 +1,21 @@
+.login-page{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGP3nexmmte7oua_54g5-lioIR_c7jAvxP1Q&s');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: antiquewhite;
+}
+
+.login-box{
+    height: 50vh;
+    width: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading{
+    color: black;
+}
