@@ -32,9 +32,9 @@ const Navbar = () => {
             </div>
         </nav>
         <div className="content">
-            <div>
+            <div className="content-in">
             <h1>Soaring Beyond the Ordinary</h1>
-            <h1>Where Every Flight is an Adventure in the Clouds</h1>
+            <h2>Where Every Flight is an Adventure in the Clouds</h2>
             </div>
         </div>
     </div>
