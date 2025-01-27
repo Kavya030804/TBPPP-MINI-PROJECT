@@ -2,6 +2,7 @@ require("dotenv").config(); // Load environment variables from .env file
 const express = require("express");
 const app = express();
 
+
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const helmet = require("helmet");
@@ -13,9 +14,9 @@ const port = process.env.PORT || 4000;
 // Middleware for security, CORS, logging, and parsing requests
 app.use(helmet());
 app.use(cors());
-app.use(morgan("tiny"));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
+
+
 
 
 mongoose
@@ -39,6 +40,9 @@ if (process.env.NODE_ENV !== "production") {
   });
 }
 
+app.use(morgan("tiny"));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 const userRouter = require("./main/routers/user_router");
 const ticketRouter = require("./main/routers/ticket_router");
