@@ -1,5 +1,5 @@
 const express=require('express');
-const { route } = require("./ticket.router");
+const { route } = require("./ticket_router");
 const router=express.Router()
 
 const {insertUser} = require("../model/user/User.model");

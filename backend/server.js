@@ -3,6 +3,9 @@ const express = require("express");
 const app = express();
 
 
+
+
+
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const helmet = require("helmet");
@@ -16,7 +19,8 @@ app.use(helmet());
 app.use(cors());
 
 
-
+const userRouter = require("./main/routers/user_router");
+const ticketRouter = require("./main/routers/ticket_router");
 
 
 mongoose
@@ -44,8 +48,7 @@ app.use(morgan("tiny"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const userRouter = require("./main/routers/user_router");
-const ticketRouter = require("./main/routers/ticket_router");
+
 
 
 app.use("/v1/user", userRouter);
@@ -59,7 +62,7 @@ app.use((req, res, next) => {
 });
 
 
-const handleError = require("./main/utilis/errorHandler");
+const handleError = require("./main/utils/errorHandler");
 app.use((error, req, res, next) => {
   handleError(error, res); // Pass the error to your error handler utility
 });
