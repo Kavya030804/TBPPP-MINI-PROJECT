@@ -46,7 +46,7 @@ const SignupForm = () => {
       if (response.ok) {
         console.log('User data:', formData);
         alert('Signup successful!');
-        navigate('/welcome'); // Navigate to a new page after successful signup
+        navigate('/welcome');
       } else {
         alert('Signup failed!');
       }
@@ -61,7 +61,7 @@ const SignupForm = () => {
         className="bg-white shadow-lg rounded-lg p-8 w-full max-w-md space-y-4" 
         onSubmit={handleSubmit}
       >
-        <h2 className="text-xl font-bold text-gray-800">Join Emirates Skywards</h2>
+        <h2 className="text-xl font-bold text-gray-800">Join Sky-Jetters</h2>
         <p className="text-sm text-gray-500">
           Open up a world of rewards every time you travel. Enjoy reward flights, upgrades, exclusive benefits, and more.
         </p>
@@ -151,7 +151,7 @@ const SignupForm = () => {
           >
             <option value="">Preferred Language</option>
             <option value="English">English</option>
-            <option value="Arabic">Arabic</option>
+            <option value="Arabic">Hindi</option>
           </select>
 
           <input
@@ -164,16 +164,16 @@ const SignupForm = () => {
           />
         </div>
 
-        <input
+        {/* <input
           type="text"
           name="inviteCode"
           placeholder="Enter Invite Code (optional)"
           value={formData.inviteCode}
           onChange={handleChange}
           className="w-full border rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+        /> */}
 
-        <div className="space-y-2">
+        {/* <div className="space-y-2">
           <label className="flex items-center">
             <input
               type="radio"
@@ -196,10 +196,10 @@ const SignupForm = () => {
             />
             Yes
           </label>
-        </div>
+        </div> */}
 
-        <div className="space-y-2">
-          <label className="flex items-center">
+        {/* <div className="space-y-2"> */}
+          {/* <label className="flex items-center">
             <input
               type="checkbox"
               name="newsletters"
@@ -208,8 +208,8 @@ const SignupForm = () => {
               className="mr-2"
             />
             Sign up to receive Emirates newsletters and special offers
-          </label>
-          <label className="flex items-center">
+          </label> */}
+          {/* <label className="flex items-center">
             <input
               type="checkbox"
               name="flydubaiNewsletters"
@@ -218,8 +218,8 @@ const SignupForm = () => {
               className="mr-2"
             />
             Sign up to receive flydubai newsletters and special offers
-          </label>
-        </div>
+          </label> */}
+        {/* </div> */}
 
         <button
           type="submit"

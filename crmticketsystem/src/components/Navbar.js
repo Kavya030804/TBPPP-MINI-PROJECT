@@ -23,7 +23,7 @@ const Navbar = () => {
                     <Link to="/sign-up" className="btn-link">Sign-Up</Link>
                 </button>
                 <button className="btn btn-login">
-                    <Link to="/login-in" className="btn-link">Login-In</Link>
+                    <Link to="/log-in" className="btn-link">Log-In</Link>
                 </button>
                 <div className="icon-container">
                     <FaBell className="icon" title="Notifications" />
