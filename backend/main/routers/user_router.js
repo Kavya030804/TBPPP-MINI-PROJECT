@@ -41,56 +41,65 @@
 
 
 
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const User = require("../model/user/User.schema");
+const { hashPassword } = require('../helpers/bcrypt.helper');
+const { insertUser } = require('../model/user/User.model');
 
-// Route to create a new user
-router.post("/", async (req, res) => {
+// handle user signup
+router.post('/sign-up', async (req, res) => {
   try {
     const { name, company, address, phone, email, password } = req.body;
 
-    // Validate required fields
-    if (!name || !company || !email || !password) {
+    if (!name || !email || !password) {
       return res.status(400).json({
-        status: "error",
-        message: "Please provide all required fields.",
+        status: 'error',
+        message: 'Please provide all required fields (name, email, password).',
       });
     }
 
-    // Create a new user
-    const newUser = new User({
+    // Hash the password
+    const hashedPassword = await hashPassword(password);
+
+    const newUserObj = {
       name,
       company,
       address,
       phone,
       email,
-      password,
-    });
+      password: hashedPassword,
+    };
 
-    const savedUser = await newUser.save();
-
+    // Save the user
+    const result = await insertUser(newUserObj);
     res.status(201).json({
-      status: "success",
-      message: "User created successfully.",
-      data: savedUser,
+      status: 'success',
+      message: 'User signed up successfully!',
+      data: result,
     });
   } catch (error) {
     console.error(error);
 
     if (error.code === 11000) {
-      // Handle duplicate email error
       return res.status(409).json({
-        status: "error",
-        message: "Email already exists.",
+        status: 'error',
+        message: 'Email already exists.',
       });
     }
 
     res.status(500).json({
-      status: "error",
-      message: "An error occurred while creating the user.",
+      status: 'error',
+      message: 'Error signing up the user.',
     });
   }
+});
+
+// handle user login
+router.post('/log-in', (req, res) => {
+  res.json({
+    status: 'success',
+    message: 'Login successfully!',
+  });
 });
 
 module.exports = router;

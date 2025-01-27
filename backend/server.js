@@ -75,10 +75,12 @@ const cors = require("cors");
 const helmet = require("helmet");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
+const ticketRouter = require("./main/routers/ticket_router");
+
 
 const port = process.env.PORT || 4000;
 
-// Middleware for security, CORS, logging, and parsing requests
+// Middleware
 app.use(helmet());
 app.use(cors());
 app.use(morgan("tiny"));
@@ -101,6 +103,7 @@ console.log("MONGO_URL:", process.env.MONGO_URL);
 
 // Routes
 app.use("/v1/user", userRouter);
+app.use("/", ticketRouter);
 
 // Handle 404 Errors
 app.use((req, res, next) => {

@@ -17,7 +17,7 @@ const userSchema = new mongoose.Schema({
     maxlength: 100,
   },
   phone: {
-    type: String, // Changed to String to handle phone numbers with leading zeros
+    type: String, 
     maxlength: 11,
   },
   email: {
