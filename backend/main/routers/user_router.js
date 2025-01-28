@@ -49,7 +49,7 @@ const { insertUser } = require('../model/user/User.model');
 // handle user signup
 router.post('/sign-up', async (req, res) => {
   try {
-    const { name, company, address, phone, email, password } = req.body;
+    const { name,address, phone, email, password } = req.body;
 
     if (!name || !email || !password) {
       return res.status(400).json({
@@ -63,7 +63,6 @@ router.post('/sign-up', async (req, res) => {
 
     const newUserObj = {
       name,
-      company,
       address,
       phone,
       email,

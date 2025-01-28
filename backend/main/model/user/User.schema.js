@@ -7,11 +7,6 @@ const userSchema = new mongoose.Schema({
     maxlength: 50,
     required: true,
   },
-  company: {
-    type: String,
-    maxlength: 50,
-    required: true,
-  },
   address: {
     type: String,
     maxlength: 100,
