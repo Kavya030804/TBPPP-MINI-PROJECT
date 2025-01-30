@@ -5,41 +5,35 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
-  return (
+return (
     <div className="home-page">
         <nav className="navbar">
             <div className="navbar-logo">
-                <PiAirplaneTakeoffFill />
+                <PiAirplaneTakeoffFill className="icon"/>
                 <h2>SKY-JETTERS</h2>
             </div>
             <div className="navbar-links">
-                <Link to="/book" className="nav-link">Book</Link>
-                <Link to="/check-in" className="nav-link">Check-In</Link>
-                <Link to="/my-trips" className="nav-link">My Trips</Link>
-                <Link to="/flight-status" className="nav-link">Flight Status</Link>
+                    <Link to="/book" className="nav-link">Book</Link>
+                    <Link to="/check-in" className="nav-link">Check-In</Link>
+                    <Link to="/my-trips" className="nav-link">My Trips</Link>
+                    <Link to="/flight-status" className="nav-link">Flight Status</Link>
             </div>
             <div className="navbar-actions">
-                <button className="btn btn-signup">
-                    <Link to="/sign-up" className="btn-link">Sign-Up</Link>
-                </button>
-                <button className="btn btn-login">
-                    <Link to="/log-in" className="btn-link">Log-In</Link>
-                </button>
-                <div className="icon-container">
-                    <FaBell className="icon" title="Notifications" />
-                    <FaSearch className="icon" title="Search" />
-                </div>
+                        <button className="btn btn-signup">
+                            <Link to="/sign-up" className="btn-link">Sign-Up</Link>
+                        </button>
+                        <button className="btn btn-login">
+                            <Link to="/log-in" className="btn-link">Log-In</Link>
+                        </button>
+                        <div className="icon-container">
+                            <FaBell className="icons" title="Notifications" />
+                            <FaSearch className="icons" title="Search" />
+                        </div>
             </div>
         </nav>
-        <div className="content">
-            <div className="content-in">
-            <h1>Soaring Beyond the Ordinary</h1>
-            <h2>Where Every Flight is an Adventure in the Clouds</h2>
-            </div>
-        </div>
     </div>
     
-  );
+);
 };
 
 export default Navbar;

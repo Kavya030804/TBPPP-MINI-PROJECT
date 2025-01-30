@@ -1,0 +1,21 @@
+.content{
+    background-image: url("https://www.shutterstock.com/shutterstock/photos/1025350168/display_1500/stock-photo-new-airport-waiting-area-interior-with-seats-and-windows-with-landscape-view-travel-and-lifestyle-1025350168.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: "column";
+    justify-content: "center";
+    align-items: "center";
+    text-align: "center";
+    position: relative;
+}
+
+.content-in{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    color: purple;
+    text-align: left;
+    font-family:cursive;
+}
