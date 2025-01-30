@@ -1,10 +1,10 @@
 import React from "react";
-import './SignUp.css';
+import './LogIn.css';
 const LogIn = () => {
     return (
         <div>
             <div>
-                <form>
+                <form  className="login-form">
                     <div className='heading'>
                         <p>Log In</p>
                     </div>

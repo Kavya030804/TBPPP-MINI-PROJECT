@@ -13,9 +13,20 @@
 
 .content-in{
     position: absolute;
-    top: 40%;
+    top: 20%;
     left: 5%;
     color: purple;
     text-align: left;
     font-family:cursive;
+}
+
+.content-in button{
+    width: 130px;
+    height: 36px;
+    border: none;
+    background-color: blue;
+    color: aliceblue;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 50px;
 }

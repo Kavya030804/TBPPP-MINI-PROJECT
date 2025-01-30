@@ -9,6 +9,7 @@ const Home = () =>{
                 <div className="content-in">
                     <h1>Soaring Beyond the Ordinary</h1>
                     <h2>Where Every Flight is an Adventure in the Clouds</h2>
+                    <button>Log Out</button>
                 </div>
             </div>
         </div>

@@ -1,8 +1,9 @@
 .main-page{
-    background-image: url("https://www.shutterstock.com/shutterstock/photos/1537114949/display_1500/stock-photo--d-rendering-illustration-of-at-airport-terminal-view-from-airport-looked-out-big-window-glass-1537114949.jpg");
+    background-image: url("https://plus.unsplash.com/premium_photo-1675805016071-6974f69a9a41?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-size: cover;
     background-position: absolute;
     height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: "column";
     justify-content: "center";
@@ -13,7 +14,7 @@
 form{
     width: 330px;
     text-align: center;
-    background-color: burlywood;
+    background-color:transparent;
 }
   
 form input{
@@ -68,4 +69,8 @@ form button{
 
 .account input{
     border-radius: 50px;
+}
+
+.heading{
+    color: black;
 }
