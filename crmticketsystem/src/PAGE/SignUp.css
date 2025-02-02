@@ -41,7 +41,6 @@ form button{
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
-    /* background-color: pink; */
     border-radius: 70px;
   }
   
@@ -50,7 +49,7 @@ form button{
     justify-content: center;
     align-items: center;
     gap:53px;
-    margin-top: 29px;
+    margin-top: 0px;
     flex-wrap: wrap;
   }
   
