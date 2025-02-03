@@ -1,8 +1,12 @@
-
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
   name: {
+    type: String,
+    maxlength: 50,
+    required: true,
+  },
+  company: {
     type: String,
     maxlength: 50,
     required: true,
@@ -12,7 +16,7 @@ const userSchema = new mongoose.Schema({
     maxlength: 100,
   },
   phone: {
-    type: String, 
+    type: String, // Changed to String to handle phone numbers with leading zeros
     maxlength: 11,
   },
   email: {
