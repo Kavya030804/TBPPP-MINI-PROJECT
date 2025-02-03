@@ -1,6 +1,7 @@
 import React from "react";
 import './Home.css';
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 const Home = () =>{
     return(
         <div>
@@ -12,6 +13,7 @@ const Home = () =>{
                     <button>Log Out</button>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }

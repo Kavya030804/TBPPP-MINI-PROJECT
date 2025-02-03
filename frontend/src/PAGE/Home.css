@@ -1,5 +1,5 @@
 .content{
-    background-image: url("https://www.shutterstock.com/shutterstock/photos/1025350168/display_1500/stock-photo-new-airport-waiting-area-interior-with-seats-and-windows-with-landscape-view-travel-and-lifestyle-1025350168.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2023/11/01/11/14/cable-car-8357177_1280.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -15,7 +15,7 @@
     position: absolute;
     top: 20%;
     left: 5%;
-    color: purple;
+    color: pink;
     text-align: left;
     font-family:cursive;
 }

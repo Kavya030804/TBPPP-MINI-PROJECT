@@ -1,6 +1,8 @@
 import { React, useState} from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './SignUp.css';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
 
 const SignUp = () => {
 
@@ -12,6 +14,7 @@ const SignUp = () => {
   }
 
   const[data,setData]=useState(userDetails)
+  const navigate = useNavigate();
   const handleInput = (event) =>{
     console.log(event.target.value);
     console.log(event.target.name);
@@ -23,58 +26,41 @@ const SignUp = () => {
 
   const handleSubmit = (event)=> {
     event.preventDefault();
-    const getData = JSON.parse(localStorage.getItem("user"))
-    localStorage.setItem("user",JSON.stringify(data));
+    if(data.name==="" || data.phone==="" || data.email==="" || data.password ===""){
+      alert("Please enter details!")
+    }
+    else{
+      let getData = localStorage.getItem("user");
+      if (getData) {
+        try {
+          getData = JSON.parse(getData);
+          if (!Array.isArray(getData)) {
+            getData = [];
+          }
+        } catch (error) {
+          console.error("Error parsing localStorage data:", error);
+          getData = [];
+        }
+        }
+        else {
+          getData = [];
+        }
+        let arr = [...getData, data];
+        localStorage.setItem("user", JSON.stringify(arr));
+        alert("Signup Successful!");
+        navigate("/log-in");
+    }
   }
-  // const [formData, setFormData] = useState({
-  //   name: '',
-  //   phone: '',
-  //   email: '',
-  //   password: ''
-  // });
-
-  // const navigate = useNavigate();
-
-  // const handleChange = (e) => {
-  //   setFormData({
-  //     ...formData,
-  //     [e.target.name]: e.target.value
-  //   });
-  // };
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     const response = await fetch('http://localhost:5000/api/sign-up', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json'
-  //       },
-  //       body: JSON.stringify(formData)
-  //     });
-      
-  //     const data = await response.json();
-      
-  //     if (response.ok) {
-  //       alert('Sign Up Successful');
-  //       navigate('/');
-  //     } else {
-  //       alert(`Error: ${data.message}`);
-  //     }
-  //   } catch (error) {
-  //     console.error('Error:', error);
-  //     alert('Something went wrong. Please try again.');
-  //   }
-  // };
-
+  
   return (
+    <>
+    <Navbar/>
     <div className='main-page'>
       <form onSubmit={handleSubmit}>
         <div className='heading'>
           <p>Sign Up</p>
         </div>
         <div className='account'>
-        {/* value={formData.name} onChange={handleChange} required */}
           <input type='text' name='name' placeholder='Enter Your Name...' onChange={handleInput}/>
           <input type='tel' name='phone' placeholder='Enter Your Phone Number...' onChange={handleInput}/>
           <input type='email' name='email' placeholder='Enter Your Email...' onChange={handleInput}/>
@@ -84,6 +70,8 @@ const SignUp = () => {
         <button type='submit'>Sign Up</button>
       </form>
     </div>
+    <Footer/>
+    </>
   );
 };
 
