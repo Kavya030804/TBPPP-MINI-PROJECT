@@ -2,9 +2,10 @@ import React from "react";
 import { FaBell, FaSearch } from "react-icons/fa";
 import { PiAirplaneTakeoffFill } from "react-icons/pi";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 
 const Navbar = () => {
+    const location = useLocation();
 return (
     <div className="home-page">
         <nav className="navbar">
@@ -18,17 +19,19 @@ return (
                     <Link to="/my-trips" className="nav-link">My Trips</Link>
                     <Link to="/flight-status" className="nav-link">Flight Status</Link>
             </div>
-            <div className="navbar-actions">
-                        <button className="btn btn-signup">
-                            <Link to="/sign-up" className="btn-link">Sign-Up</Link>
-                        </button>
-                        <button className="btn btn-login">
-                            <Link to="/log-in" className="btn-link">Log-In</Link>
-                        </button>
-                        <div className="icon-container">
+            {location.pathname !== '/log-in' && location.pathname !== '/sign-up' &&(
+                <div className="navbar-actions">
+                <button className="btn btn-signup">
+                    <Link to="/sign-up" className="btn-link">Sign-Up</Link>
+                </button>
+                <button className="btn btn-login">
+                    <Link to="/log-in" className="btn-link">Log-In</Link>
+                </button>
+                </div>
+            )}
+            <div className="icon-container">
                             <FaBell className="icons" title="Notifications" />
                             <FaSearch className="icons" title="Search" />
-                        </div>
             </div>
         </nav>
     </div>

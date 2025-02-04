@@ -1,20 +1,26 @@
 .main-page{
-    background-image: url("https://plus.unsplash.com/premium_photo-1675805016071-6974f69a9a41?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-image: url("https://cdn.pixabay.com/photo/2023/11/01/11/16/lake-8357182_1280.jpg");
     background-size: cover;
     background-position: absolute;
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: "column";
-    justify-content: "center";
-    align-items: "center";
-    text-align: "center";
+    justify-content: "flex-end";
+    align-items: center;
+    text-align: center;
     position: relative;
+    padding-right: 20px;
+    
 }
 form{
     width: 330px;
+    justify-content: flex-end;
     text-align: center;
-    background-color:transparent;
+    margin-left: auto;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    background-color: transparent;
 }
   
 form input{
@@ -22,8 +28,9 @@ form input{
     padding: 5px;
     border: 1px solid rgb(119, 119, 119);
     font-size: 17px;
-    color: rgb(83, 83, 83);
+    color: white;
     margin-top: 21px;
+    /* background-color: black; */
 }
   
 form button{
@@ -41,16 +48,12 @@ form button{
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
-    /* background-color: pink; */
     border-radius: 70px;
   }
   
   .main-page{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap:53px;
-    margin-top: 29px;
+    margin-top: 0px;
     flex-wrap: wrap;
   }
   
