@@ -25,7 +25,9 @@ body {
   }
 
   .icon{
-    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
   }
   
   .navbar-links {
@@ -37,10 +39,12 @@ body {
     text-decoration: none;
     color: white;
     font-size: 1rem;
+    cursor: pointer;
   }
   
   .nav-link:hover {
     text-decoration: underline;
+    color: #c2185b;
   }
   
   .navbar-actions {
@@ -49,43 +53,84 @@ body {
     gap: 20px;
   }
   
-  .btn {
+  .navbar-actions button {
     background-color: pink;
     border: 1px solid gold;
-    color: gold;
+    color: white;
     padding: 8px 15px;
     font-size: 0.9rem;
     border-radius: 4px;
     cursor: pointer;
   }
   
-  .btn-signup {
+  .btn book {
     background-color: #d81b60;
     border-color: #d81b60;
-    color: gold;
-  }
-  
-  .btn-signup:hover {
-    background-color: #c2185b;
-  }
-  
-  .btn-login:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .icon-container {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .icons {
-    font-size: 1.2rem;
-    cursor: pointer;
     color: white;
   }
   
-  .icons:hover {
-    color: #d81b60;
+  .btn-book:hover {
+    background-color: #c2185b;
+  }
+  
+  .btn-trial:hover {
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
+  #why-us ul{
+    font-size: large;
+    font-weight: 100;
+  }
+
+  .menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 15px;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    height: 600px;
+    width: 1000px;
+    justify-content: space-between;
+  }
+  
+  .menu-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .menu-section {
+    width: 40%;
+    margin-right: 20px;
+  }
+  
+  .menu-section h4 {
+    font-size: 20px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+  
+  .menu-section a {
+    font-size: 14px;
+    margin: 10px 0;
+    color: gray;
+  }
+  
+.menu-section a strong{
+    color: black;
+    text-decoration: none;
+  }
 

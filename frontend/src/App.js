@@ -8,7 +8,7 @@ const App = () => {
     <>
     <Router>
       <Routes>
-        <Route path="/book" element={<div>Book Page</div>} />
+        <Route path="/why-us" element={<div>Book Page</div>} />
         <Route path="/check-in" element={<div>Check-In Page</div>} />
         <Route path="/my-trips" element={<div>My Trips Page</div>} />
         <Route path="/flight-status" element={<div>Flight Status Page</div>} />
