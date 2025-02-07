@@ -2,76 +2,64 @@ import React from "react";
 import "./Footer.css";
 const Footer = () => {
     return (
-    <footer className="footer">
+        <footer className="footer">
         <div className="footer-container">
-            <div className="footer-column">
-                <h3>About us</h3>
-                <ul>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Media Centre</a></li>
-                    <li><a href="#">Our planet</a></li>
-                    <li><a href="#">Our people</a></li>
-                    <li><a href="#">Our communities</a></li>
-                </ul>
+            <div className="footer-left">
+                <h2>Try Resolve360 Today!</h2>
+                <p className="footer-tagline">Building a world with better support.</p>
+                <div className="footer-buttons">
+                <button className="demo-btn">Book a Demo</button>
+                <button className="trial-btn">Try for Free</button>
+                </div>
             </div>
-            
-            <div className="footer-column">
-                <h3>Help</h3>
-                <ul>
-                    <li><a href="#">Help and Contact</a></li>
-                    <li><a href="#">Travel Updates</a></li>
-                    <li><a href="#">Special Assistance</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    </ul>
+            <div className="footer-links">
+                <div className="footer-column">
+                    <h4>Solutions</h4>
+                    <a href="#">for Enterprise</a>
+                    <a href="#">for Startups</a>
+                    <a href="#">for Customer Support</a>
+                    <a href="#">for Internal Support</a>
+                    <a href="#">for Sales & CRM</a>
+                    <a href="#">Live Chat Ticketing</a>
+                </div>
+                <div className="footer-column">
+                    <h4>Deskpro</h4>
+                    <a href="#">What is Help Desk Software?</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Press</a>
+                    <a href="#">What's New</a>
+                </div>
+                <div className="footer-column">
+                    <h4>Resources</h4>
+                    <a href="#">Pricing</a>
+                    <a href="#">Customer Stories</a>
+                    <a href="#">Cloud vs On-Premise</a>
+                    <a href="#">Apps & Integrations</a>
+                    <a href="#">Developers & API</a>
+                    <a href="#">Security</a>
+                </div>
+                <div className="footer-column">
+                    <h4>Support</h4>
+                    <a href="#">Product Tour</a>
+                    <a href="#">Help Center</a>
+                    <a href="#">Talk to Sales</a>
+                    <a href="#">Professional Services</a>
+                    <a href="#">Product Consultancy</a>
+                    <a href="#">Onboarding</a>
+                </div>
+                <div className="footer-column">
+                    <h4>Top Features</h4>
+                    <a href="#">Automation</a>
+                    <a href="#">Customization</a>
+                    <a href="#">Follow Ups</a>
+                    <a href="#">Help Center Platform</a>
+                    <a href="#">Integrations</a>
+                    <a href="#">Knowledge Base Software</a>
+                </div>
             </div>
-            
-            <div className="footer-column">
-                <h3>Book</h3>
-                    <ul>
-                        <li><a href="#">Book flights</a></li>
-                        <li><a href="#">Travel services</a></li>
-                        <li><a href="#">Transportation</a></li>
-                        <li><a href="#">Planning your trip</a></li>
-                        <li><a href="#">Search for flights</a></li>
-                    </ul>
-            </div>
-
-            <div className="footer-column">
-                <h3>Manage</h3>
-                <ul>
-                    <li><a href="#">Check-in</a></li>
-                    <li><a href="#">Manage booking</a></li>
-                    <li><a href="#">Flight status</a></li>
-                </ul>
-            </div>
-            <div className="footer-column">
-                <h3>Before you fly</h3>
-                <ul>
-                    <li><a href="#">Baggage</a></li>
-                    <li><a href="#">Visa & Passport</a></li>
-                    <li><a href="#">Health</a></li>
-                    <li><a href="#">Travel information</a></li>
-                </ul>
-            </div>
-
-            <div className="footer-column">
-        <h3>Where we fly</h3>
-        <ul>
-            <li><a href="#">Route map</a></li>
-        </ul>
         </div>
-
-
-        {/* Column 8: Loyalty */}
-        <div className="footer-column">
-        <h3>Loyalty</h3>
-        <ul>
-            <li><a href="#">Log in to SkyJetters</a></li>
-            <li><a href="#">Join SkyJetters</a></li>
-        </ul>
-        </div>
-    </div>
     </footer>
   );
 };
