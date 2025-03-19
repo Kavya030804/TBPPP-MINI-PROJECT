@@ -3,18 +3,18 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "./PAGE/SignUp";
 import Home from "./PAGE/Home";
 import LogIn from "./PAGE/LogIn";
+import FreeTrial from "./components/FreeTrial";
+import BookDemo from "./components/BookDemo";
 const App = () => {
   return (
     <>
     <Router>
       <Routes>
-        <Route path="/why-us" element={<div>Book Page</div>} />
-        <Route path="/check-in" element={<div>Check-In Page</div>} />
-        <Route path="/my-trips" element={<div>My Trips Page</div>} />
-        <Route path="/flight-status" element={<div>Flight Status Page</div>} />
         <Route path="/" element={<Home />} />
         <Route path="/sign-up" element={<SignUp />}/>
         <Route path="/log-in" element={<LogIn />} />
+        <Route path="/free-trial" element={<FreeTrial />} />
+        <Route path="/book-demo" element={<BookDemo />} />
       </Routes>
     </Router>
     </>

@@ -20,6 +20,7 @@
   flex-direction: column;
   align-items: flex-start;
   min-width: 100%;
+  background-color: black;
 }
 
 .footer-logo {
@@ -42,7 +43,8 @@
   display: flex;
   justify-content: flex-end; /* Align buttons to the right */
   width: 100%; /* Ensure it takes full width */
-  margin-top: 5px;
+  margin-top: 0px;
+  margin-bottom: auto;
 }
 
 .demo-btn,.trial-btn {

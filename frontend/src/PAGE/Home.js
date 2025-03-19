@@ -2,13 +2,14 @@ import React from "react";
 import './Home.css';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import LogIn from "./LogIn";
 const Home = () =>{
     return(
         <div>
             <div className="top-links">
                 <span><a href="#">Search</a></span>
                 <span>Buy License</span>
-                <span>Log In</span>
+                <span><a href="/log-in" >Log In</a></span>
                 <span>Call</span>
                 <span>Contact Us</span>
             </div>

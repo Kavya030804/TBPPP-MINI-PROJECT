@@ -20,7 +20,7 @@ return (
     <div className="home-page">
         <nav className="navbar">
             <div className="navbar-logo">
-                <img src="https://files.oaiusercontent.com/file-NfF2MDSHBaDx21AF1ML9Rj?se=2025-02-06T17%3A48%3A24Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D6e23ff9b-1043-43d0-9ef3-d5a17c76e2b8.webp&sig=sDaKlpHFpWrzETNqUpk/ZD7AOIkcdAoXQdHx%2BanJRVY%3D" className="icon"/>
+                <img src="https://files.oaiusercontent.com/file-JZLcvFtvZU1kaGUBA6oJhx?se=2025-03-18T03%3A04%3A54Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dcbd19bb3-6b58-4a92-bcd9-aaf0f12adacb.webp&sig=oN2GhTt7VkkA88RsUobS5qwVDUR3fojzDEIJ3yLVA6k%3D" className="icon"/>
                 <h2>Resolve360</h2>
             </div>
             <div className="navbar-links">
@@ -132,11 +132,11 @@ return (
             </div>
             <div className="navbar-actions">
                 <button className="btn book">
-                    <Link to="/book-a-demo" className="btn-link">Book A Demo</Link>
+                    <Link to="/book-demo" className="btn-link">Book A Demo</Link>
                 </button>
                 <button className="btn trial">
                     <Link to="/free-trial" className="btn-link">Free Trial</Link>
-                </button>
+                </button>l
             </div>
         </nav>
     </div>
