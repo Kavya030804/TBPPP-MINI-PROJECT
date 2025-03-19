@@ -6,13 +6,6 @@ import LogIn from "./LogIn";
 const Home = () =>{
     return(
         <div>
-            <div className="top-links">
-                <span><a href="#">Search</a></span>
-                <span>Buy License</span>
-                <span><a href="/log-in" >Log In</a></span>
-                <span>Call</span>
-                <span>Contact Us</span>
-            </div>
             <Navbar/>
             <div className="content">
                 <div className="content-in">
