@@ -79,10 +79,6 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
   }
 
-  #why-us ul{
-    font-size: large;
-    font-weight: 100;
-  }
 
   .menu-button {
     background: none;
@@ -95,15 +91,15 @@ body {
   }
 
   .dropdown-menu {
-    position: absolute;
+    position: center;
     top: 100%;
-    left: 0;
+    left: absolute;
     background: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 20px;
     display: flex;
-    height: 700px;
+    height: 800px;
     width: 750px;
     flex-direction: column;
     justify-content: space-between;
@@ -153,11 +149,13 @@ body {
 
 .dropdown-right {
   flex: 1;
-  padding-left: 20px;
+  top: 0px;
+  padding-left: 50px;
 }
 
 .dropdown-section {
   width: 50%;
+  height: 50%;
   padding: 10px;
 }
 
@@ -192,7 +190,7 @@ body {
 
 .dropdown-right ul li {
   display: flex;
-  align-items: center;
+  align-items: right;
   gap: 8px;
   padding: 5px 0;
   font-size: 14px;

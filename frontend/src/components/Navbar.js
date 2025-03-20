@@ -1,4 +1,4 @@
-import React ,{useState} from "react";
+import React ,{useState,useRef} from "react";
 import "./Navbar.css";
 import { MdEmail,MdOutlineBrandingWatermark,MdOutlineMessage,MdCastForEducation,MdSupportAgent} from "react-icons/md";
 import { CiChat1 ,CiHospital1} from "react-icons/ci";
@@ -18,6 +18,29 @@ import { Link} from "react-router-dom";
 const Navbar = () => {
     const [platformDropdown, setPlatformDropdown] = useState(false);
     const [solutionsDropdown, setSolutionsDropdown] = useState(false);
+    const timeoutRef = useRef(null);
+    const openPlatformDropdown = () => {
+        clearTimeout(timeoutRef.current);
+        setPlatformDropdown(true);
+    };
+    
+    const closePlatformDropdown = () => {
+        timeoutRef.current = setTimeout(() => {
+            setPlatformDropdown(false);
+        }, 10);
+    };
+
+    const openSolutionsDropdown = () => {
+        clearTimeout(timeoutRef.current);
+        setSolutionsDropdown(true);
+    };
+    
+    const closeSolutionsDropdown = () => {
+        timeoutRef.current = setTimeout(() => {
+            setSolutionsDropdown(false);
+        }, 10);
+    };
+
 return (
     <div className="home-page">
         <nav className="navbar">
@@ -26,7 +49,7 @@ return (
                 <h2>Resolve360</h2>
             </div>
             <div className="navbar-links">
-                <button className="menu-button" onMouseEnter={() => setPlatformDropdown(true)} onMouseLeave={() => setPlatformDropdown(false)}>
+                <button className="menu-button" onMouseEnter={openPlatformDropdown} onMouseLeave={closePlatformDropdown}>
                 PLATFORM ▾
                         {platformDropdown && (
                             <div className={`dropdown-menu ${platformDropdown ? "show" : ""}`}>
@@ -68,7 +91,7 @@ return (
                             </div>
                         )}
                 </button>
-                <button className="menu-button" onMouseEnter={() => setSolutionsDropdown(true)} onMouseLeave={() => setSolutionsDropdown(false)}>Solutions ▾
+                <button className="menu-button" onMouseEnter={openSolutionsDropdown} onMouseLeave={closeSolutionsDropdown}>Solutions ▾
                         {solutionsDropdown && (
                             <div className={`dropdown-menu ${solutionsDropdown ? "show" : ""}`}>
                                     <div className="dropdown-left">
@@ -77,6 +100,7 @@ return (
                                             <p>Enhance team support systems.</p>
                                             <div className="dropdown-item">
                                                 <AiTwotoneCustomerService /> <span>IT Service Desk</span>
+                                                {/* <p>Deliver Stractured IT Management Services.</p> */}
                                             </div>
                                             <div className="dropdown-item">
                                                 <MdSupportAgent /> <span>HR Support</span>
