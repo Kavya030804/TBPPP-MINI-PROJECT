@@ -1,59 +1,16 @@
-
-
-
-
-
-require("dotenv").config();
 const express = require("express");
-const app = express();
-const bodyParser = require("body-parser");
+const dotenv = require("dotenv");
 const cors = require("cors");
-const helmet = require("helmet");
-const morgan = require("morgan");
-const mongoose = require("mongoose");
+const connectDB = require("./config/db");
 
-const port = process.env.PORT || 4000;
+dotenv.config();
+connectDB();
 
-// Middleware for security, CORS, logging, and parsing requests
-// app.use(helmet());
-app.use(cors());
-app.use(morgan("tiny"));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+const app = express();
+app.use(express.json());
+app.use(cors());  
 
-// Routers
-const userRouter = require("./main/routers/user_router");
+app.use("/api/users", require("./routes/userRoutes"));
 
-// MongoDB Connection
-mongoose
-  .connect(process.env.MONGO_URL, { 
-    useNewUrlParser: true,
-    useUnifiedTopology: true 
-  })
-  .then(() => console.log("MongoDB connected successfully"))
-  .catch((error) => console.error("MongoDB connection error:", error));
-
-console.log("MONGO_URL:", process.env.MONGO_URL);
-
-// Routes
-app.use("/v1/user", userRouter);
-
-// Handle 404 Errors
-app.use((req, res, next) => {
-  const error = new Error("Resource not found");
-  error.status = 404;
-  next(error);
-});
-
-// Centralized Error Handling
-app.use((error, req, res, next) => {
-  res.status(error.status || 500).json({
-    status: "error",
-    message: error.message || "Internal Server Error",
-  });
-});
-
-// Start the Server
-app.listen(port, () => {
-  console.log('API is running on http://localhost:${port}');
-});
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
