@@ -1,19 +1,17 @@
 import React ,{useState} from "react";
 import "./Navbar.css";
-import { MdEmail,MdOutlineBrandingWatermark,MdOutlineMessage} from "react-icons/md";
-import { CiChat1,CiShoppingCart } from "react-icons/ci";
+import { MdEmail,MdOutlineBrandingWatermark,MdOutlineMessage,MdCastForEducation,MdSupportAgent} from "react-icons/md";
+import { CiChat1 ,CiHospital1} from "react-icons/ci";
 import { IoShareSocialSharp } from "react-icons/io5";
-import { FaInbox,FaNetworkWired} from "react-icons/fa";
-import { FaTicket } from "react-icons/fa6";
-import { SiFacebookgaming,SiKnowledgebase  } from "react-icons/si";
-import { RiGovernmentFill ,RiCheckboxMultipleBlankFill} from "react-icons/ri";
-import { GiProfit } from "react-icons/gi";
+import { FaInbox,FaNetworkWired,FaClinicMedical,FaMoneyBill} from "react-icons/fa";
+import { FaTicket ,FaCartShopping} from "react-icons/fa6";
+import { SiKnowledgebase  } from "react-icons/si";
 import { LiaWpforms } from "react-icons/lia";
-import { GrTechnology } from "react-icons/gr";
+import { GrIntegration ,GrTechnology} from "react-icons/gr";
 import { BsFillTelephoneFill } from "react-icons/bs";
-import { TbAutomation } from "react-icons/tb";
-import { IoMdAnalytics } from "react-icons/io";
-import { GrIntegration } from "react-icons/gr";
+import { RiGovernmentFill,RiCustomerService2Fill } from "react-icons/ri";
+import { IoMdAnalytics,IoIosBusiness } from "react-icons/io";
+import { AiTwotoneCustomerService } from "react-icons/ai";
 import { Link} from "react-router-dom";
 
 
@@ -29,7 +27,7 @@ return (
             </div>
             <div className="navbar-links">
                 <button className="menu-button" onMouseEnter={() => setPlatformDropdown(true)} onMouseLeave={() => setPlatformDropdown(false)}>
-                    PLATFORM 
+                PLATFORM ▾
                         {platformDropdown && (
                             <div className={`dropdown-menu ${platformDropdown ? "show" : ""}`}>
                                 <div className="menu-columns">
@@ -70,36 +68,66 @@ return (
                             </div>
                         )}
                 </button>
-                <button className="menu-button" onMouseEnter={() => setSolutionsDropdown(true)} onMouseLeave={() => setSolutionsDropdown(false)}>SOLUTIONS
+                <button className="menu-button" onMouseEnter={() => setSolutionsDropdown(true)} onMouseLeave={() => setSolutionsDropdown(false)}>Solutions ▾
                         {solutionsDropdown && (
                             <div className={`dropdown-menu ${solutionsDropdown ? "show" : ""}`}>
-                                <div className="menu-columns">
-                                    <h4>Internal Support</h4>
-                                    <p>Enhance team support systems.</p>
-                                    <div className="dropdown-item">
-                                        <span>IT Service Desk</span>
+                                    <div className="dropdown-left">
+                                        <div className="dropdown-section">
+                                            <h4>Internal Support</h4>
+                                            <p>Enhance team support systems.</p>
+                                            <div className="dropdown-item">
+                                                <AiTwotoneCustomerService /> <span>IT Service Desk</span>
+                                            </div>
+                                            <div className="dropdown-item">
+                                                <MdSupportAgent /> <span>HR Support</span>
+                                            </div>
+                                        </div>
+                                        <div className="dropdown-section">
+                                            <h4>Customer Support</h4>
+                                            <p>Delight with omnichannel support.</p>
+                                            <div className="dropdown-item">
+                                                <IoIosBusiness /> <span>B2B Support</span>
+                                            </div>
+                                            <div className="dropdown-item">
+                                                <RiCustomerService2Fill /> <span>B2C Support</span>
+                                            </div>
+                                        </div>
+                                        <div className="dropdown-section">
+                                            <h4>Customer Stories</h4>
+                                            <p>Discover how teams like yours succeed with Resolve360.</p>
+                                            <a href="#" className="dropdown-link">View all →</a>
+                                        </div>
+                                        <div className="dropdown-section">
+                                            <h4>Host Your Way</h4>
+                                            <p>Run Resolve360 anywhere: our cloud, private cloud, or your servers.</p>
+                                            <a href="#" className="dropdown-link">Explore Hosting →</a>
+                                        </div>
                                     </div>
-                                    <div className="dropdown-item">
-                                        <span>HR Support</span>
+                                    <div className="dropdown-right">
+                                        <div className="dropdown-section">
+                                        <h4>Industries</h4>
+                                        <ul>
+                                            <li><GrTechnology /> Technology & Software</li>
+                                            <li><MdCastForEducation /> Education</li>
+                                            <li><FaClinicMedical /> Health & Medical Services</li>
+                                            <li><FaCartShopping /> E-Commerce</li>
+                                            <li><FaMoneyBill /> Financial Services</li>
+                                            <li><RiGovernmentFill /> Government</li>
+                                            <li><CiHospital1 /> Hospitality & Leisure</li>
+                                        </ul>
+                                        </div>
+                                        <div className="dropdown-section">
+                                        <h4>Businesses</h4>
+                                        <ul>
+                                            <li>Enterprise</li>
+                                            <li>Startups</li>
+                                        </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="menu-columns">
-                                    <h4>Customer Support</h4>
-                                    <p>Delight with omnichannel support.</p>
-                                    <div className="dropdown-item">
-                                        <span>B2B Support</span>
-                                    </div>
-                                    <div className="dropdown-item">
-                                        <span>B2C Support</span>
-                                    </div>
-                                </div>
                             </div>
                         )}
-                        </button>
-                    {/* <li className="nav-link">Product</li>
-                    <li className="nav-link">Support</li>
-                    <li className="nav-link">Resources</li> */}
-            </div>
+                    </button>
+                </div>
             <div className="navbar-actions">
             <button className="btn login">
                     <Link to="/log-in" className="btn-link">LOG IN</Link>
