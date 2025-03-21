@@ -100,7 +100,6 @@ return (
                                             <p>Enhance team support systems.</p>
                                             <div className="dropdown-item">
                                                 <AiTwotoneCustomerService /> <span>IT Service Desk</span>
-                                                {/* <p>Deliver Stractured IT Management Services.</p> */}
                                             </div>
                                             <div className="dropdown-item">
                                                 <MdSupportAgent /> <span>HR Support</span>
