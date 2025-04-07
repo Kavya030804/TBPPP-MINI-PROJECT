@@ -58,7 +58,6 @@ function Ticket() {
 
     dispatch(getTicket(ticketId));
     dispatch(getNotes(ticketId));
-    // eslint-disable-next-line
   }, [isError, message, ticketId]);
 
   if (isLoading || notesIsLoading) return <Spinner />;
@@ -67,14 +66,12 @@ function Ticket() {
     return <h3>Something went wrong</h3>;
   }
 
-  // Close ticket
   const onTicketClose = () => {
     dispatch(closeTicket(ticketId));
     toast.success("Ticket Closed");
     navigate("/tickets");
   };
 
-  // Open/Close Modal
   const openModal = () => {
     setModalIsOpen(true);
   };
@@ -82,7 +79,6 @@ function Ticket() {
     setModalIsOpen(false);
   };
 
-  // Create Note Submit
   const onNoteSubmit = (e) => {
     e.preventDefault();
     dispatch(createNote({ ticketId, noteText }));

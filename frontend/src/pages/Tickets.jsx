@@ -13,7 +13,6 @@ function Tickets() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Unmounting
     return () => {
       if (isSuccess) {
         dispatch(reset());
